@@ -7,8 +7,8 @@ $ ./plot_NZ_inset.sh
 DIRECTORIES:
 colour_palettes/	.cpt files for plotting topography etc
 data_examples/		data used in the examples
-figures/		    	where output figures go (set on 'gmt begin' line in scripts)
-files/		    		topography files etc
+figures/		 	where output figures go (set on 'gmt begin' line in scripts)
+files/		   	topography files etc
 
 Figure output extension is set on 'gmt begin' line.
 Usually I output in .pdf (preserves transparency features) and add extra 
