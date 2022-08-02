@@ -1,15 +1,14 @@
-Bash scripts are written for GMT 6.0.0. Katie Woods
-Scripts run on SGEES018 configuration: 02 Aug 2022
+Bash scripts are written for GMT 6.0.0. 
+Katie Woods. 02 Aug 2022
 
-Scripts are in main GMT6_examples directory (/Volumes/GeoPhysics_16/users-data/woodskath/GMT6_examples/) 
-and can be run from command line with:
+Scripts can be run from command line, for example:
 $ ./plot_NZ_inset.sh
 
 DIRECTORIES:
 colour_palettes/	.cpt files for plotting topography etc
 data_examples/		data used in the examples
-figures/			where output figures go (set on 'gmt begin' line in scripts)
-files/				topography files etc
+figures/		    	where output figures go (set on 'gmt begin' line in scripts)
+files/		    		topography files etc
 
 Figure output extension is set on 'gmt begin' line.
 Usually I output in .pdf (preserves transparency features) and add extra 
