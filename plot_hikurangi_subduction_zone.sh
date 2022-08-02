@@ -4,7 +4,6 @@
 
 
 #FILE PATHS
-topo_grd='files/500m_allnz_wgs84.grd' #NZ topo
 bathy_grd='files/nzbathy_2016.nc' #NIWA 2016 topo
 topo_cpt='colour_palettes/europe_3.cpt'
 bathy_cpt='colour_palettes/dense.cpt'
@@ -22,7 +21,7 @@ reg='-Rd172/180/-42/-36.5'
 #MAKE COLOUR PALETTES
 gmt makecpt -C$topo_cpt -T0/2000/200 > topo.cpt
 gmt makecpt -C$bathy_cpt -T-4500/0/500 -I > bathy.cpt 
-gmt grdgradient $topo_grd -GtopoI.grd -A90 -N4
+gmt grdgradient $bathy_grd -GtopoI.grd -A90 -N4
 gmt grdgradient $bathy_grd -GbathyI.grd -A0 -N4
 
 #FIGURE
@@ -35,7 +34,7 @@ gmt begin figures/hikurangi_subduction_zone pdf
 	gmt basemap $reg $proj -BnWSe -Ba2f1 
 	gmt grdimage $bathy_grd -IbathyI.grd -Cbathy.cpt
 	gmt coast -Gc
-	gmt grdimage $topo_grd -ItopoI.grd -Ctopo.cpt
+	gmt grdimage $bathy_grd -ItopoI.grd -Ctopo.cpt
 	gmt coast -Q
 	
 	#COASTLINE, fading bathy/topo and filling lakes white
